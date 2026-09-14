@@ -1,0 +1,5 @@
+CE;714259558;Patricia;Rodríguez
+CC;171298076;Carlos;Martínez
+TI;367167625;María;Martínez
+TI;276788420;Patricia;Pérez
+CC;778637910;Luis;López
