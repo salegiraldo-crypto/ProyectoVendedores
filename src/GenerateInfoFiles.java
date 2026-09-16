@@ -27,16 +27,16 @@ public class GenerateInfoFiles {
         System.out.println("\n=== Archivos generados exitosamente ===");
     }
 
-    // metodo que genera el archivo de vendedores
+    // metodo que genera el archivo de los vendors
     public static void createSalesManInfoFile(int salesmanCount) {
         try {
             FileWriter writer = new FileWriter("vendedores.txt");
 
-            // tipos de documento disponibles
+            // tipos de documento disponibles para los vendors
             String[] tipos = {"CC", "TI", "CE"};
-            // nombres comunes en Colombia
+            // nombres de los vendeores
             String[] nombres = {"Juan", "María", "Carlos", "Ana", "Pedro", "Laura", "Luis", "Patricia"};
-            // apellidos comunes
+            // apellidos
             String[] apellidos = {"Pérez", "García", "López", "Martínez", "Rodríguez", "Hernández", "González", "Flores"};
 
             Random random = new Random();
@@ -47,7 +47,7 @@ public class GenerateInfoFiles {
                 String nombre = nombres[random.nextInt(nombres.length)];
                 String apellido = apellidos[random.nextInt(apellidos.length)];
 
-                // escribimos la línea en formato: tipo;numero;nombre;apellido
+                // aquí se escribe la línea en formato así == tipo;numero;nombre;apellido
                 writer.write(tipo + ";" + numeroDocumento + ";" + nombre + ";" + apellido + "\n");
             }
 
@@ -58,8 +58,9 @@ public class GenerateInfoFiles {
             System.out.println("Error al crear archivo de vendedores: " + e.getMessage());
         }
     }
+    // aquí finaliza el metodo de generar archivos de vendedores y breve
 
-    // metodo que genera el archivo de productos
+    // metodo que genera los archivos de productos
     public static void createProductsFile(int productsCount) {
         try {
             FileWriter writer = new FileWriter("productos.txt");
@@ -70,13 +71,13 @@ public class GenerateInfoFiles {
             Random random = new Random();
 
             for (int i = 0; i < productsCount; i++) {
-                // el ID va con formato P001, P002, etc
+                // el ID va con formato P001, P002, etc (P es de producto jejeje)
                 String idProducto = "P" + String.format("%03d", i + 1);
                 String nombreProducto = productNames[random.nextInt(productNames.length)];
                 // precio aleatorio entre 10000 y 2000000
                 long precio = 10000 + random.nextLong(1990000);
 
-                // escribimos: id;nombre;precio
+                // escribimos == id;nombre;precio así mero como el de venderdores
                 writer.write(idProducto + ";" + nombreProducto + ";" + precio + "\n");
             }
 
@@ -87,6 +88,7 @@ public class GenerateInfoFiles {
             System.out.println("Error al crear archivo de productos: " + e.getMessage());
         }
     }
+    // aquí se finaliza el metodo de productos
 
     // metodo que genera archivo de ventas para cada vendedor
     public static void createSalesManFile(int randomSalesCount, String name, long id) {
@@ -95,7 +97,7 @@ public class GenerateInfoFiles {
             String filename = id + "_ventas.txt";
             FileWriter writer = new FileWriter(filename);
 
-            // estos IDs tienen que coincidir con los productos generados
+            // estos IDs tienen que coincidir con los productos generados y breves
             String[] productIds = {"P001", "P002", "P003", "P004", "P005", "P006", "P007", "P008", "P009", "P010"};
 
             String tipoDocumento = "CC";
@@ -107,7 +109,7 @@ public class GenerateInfoFiles {
                 // cantidad entre 1 y 20 unidades
                 int cantidad = 1 + random.nextInt(20);
 
-                // escribimos: tipodoc;numero;producto;cantidad
+                // escribimos == tipodoc;numero;producto;cantidad mismo anteriores
                 writer.write(tipoDocumento + ";" + id + ";" + productoId + ";" + cantidad + "\n");
             }
 
@@ -118,5 +120,6 @@ public class GenerateInfoFiles {
             System.out.println("Error al crear archivo de ventas: " + e.getMessage());
         }
     }
+    // Fin del metodo y sale
 
 }
