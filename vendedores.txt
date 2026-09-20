@@ -1,5 +1,6 @@
-CE;714259558;Patricia;Rodríguez
-CC;171298076;Carlos;Martínez
-TI;367167625;María;Martínez
-TI;276788420;Patricia;Pérez
-CC;778637910;Luis;López
+TipoDocumento;NúmeroDocumento;Nombres;Apellidos
+CC;331726781;Laura;Flores
+TI;198139361;Patricia;González
+CC;864119189;Carlos;Flores
+CC;889808602;Laura;Pérez
+TI;816948823;Carlos;González

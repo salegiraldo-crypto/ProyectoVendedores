@@ -1,3 +1,11 @@
+/*
+CONCEPTOS FUNDAMENTALES DE PROGRAMACIÓN-[GRUPO B01]
+Equipo 13
+SERGIO GIRALDO CORTES
+KELLY MEJIA NARVAEZ
+ */
+
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
@@ -32,6 +40,9 @@ public class GenerateInfoFiles {
         try {
             FileWriter writer = new FileWriter("vendedores.txt");
 
+            // Se agregan encabezados a los archivos
+            writer.write("TipoDocumento;NúmeroDocumento;Nombres;Apellidos\n");
+
             // tipos de documento disponibles para los vendors
             String[] tipos = {"CC", "TI", "CE"};
             // nombres de los vendeores
@@ -65,6 +76,9 @@ public class GenerateInfoFiles {
         try {
             FileWriter writer = new FileWriter("productos.txt");
 
+            // Se agregan encabezados a los archivos
+            writer.write("IDProducto;NombreProducto;PrecioPorUnidad\n");
+
             String[] productNames = {"Laptop", "Mouse", "Teclado", "Monitor", "Cable USB",
                     "Audífonos", "Webcam", "Mousepad", "Adaptador", "Hub USB"};
 
@@ -96,6 +110,9 @@ public class GenerateInfoFiles {
             // el archivo se llama con el ID del vendedor
             String filename = id + "_ventas.txt";
             FileWriter writer = new FileWriter(filename);
+
+            // Se agregan encabezados a los archivos
+            writer.write("TipoDocumento;NúmeroDocumento;IDProducto;Cantidad\n");
 
             // estos IDs tienen que coincidir con los productos generados y breves
             String[] productIds = {"P001", "P002", "P003", "P004", "P005", "P006", "P007", "P008", "P009", "P010"};
