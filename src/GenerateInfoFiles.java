@@ -8,6 +8,7 @@ KELLY MEJIA NARVAEZ
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class GenerateInfoFiles {
@@ -16,7 +17,9 @@ public class GenerateInfoFiles {
         System.out.println("=== Generando archivos de prueba ===\n");
 
         System.out.println("Paso 1: Generando vendedores...");
-        createSalesManInfoFile(5);
+        ArrayList<Long> idsGenerados = new ArrayList<>();
+        ArrayList<String> nombresGenerados = new ArrayList<>();
+        createSalesManInfoFile(5, idsGenerados, nombresGenerados);
         System.out.println();
 
         System.out.println("Paso 2: Generando productos...");
@@ -24,30 +27,24 @@ public class GenerateInfoFiles {
         System.out.println();
 
         System.out.println("Paso 3: Generando archivos de ventas...");
-
-        long[] idsVendedores = {123456789L, 987654321L, 111222333L, 555666777L, 999888777L};
-        String[] nombresVendedores = {"Juan", "María", "Carlos", "Ana", "Pedro"};
-
-        for (int i = 0; i < idsVendedores.length; i++) {
-            createSalesManFile(8, nombresVendedores[i], idsVendedores[i]);
+        // usamos los IDs que se generaron en vendedores
+        for (int i = 0; i < idsGenerados.size(); i++) {
+            createSalesManFile(8, nombresGenerados.get(i), idsGenerados.get(i));
         }
 
         System.out.println("\n=== Archivos generados exitosamente ===");
     }
 
     // metodo que genera el archivo de los vendors
-    public static void createSalesManInfoFile(int salesmanCount) {
+    public static void createSalesManInfoFile(int salesmanCount, ArrayList<Long> idsGenerados, ArrayList<String> nombresGenerados) {
         try {
             FileWriter writer = new FileWriter("vendedores.txt");
 
-            // Se agregan encabezados a los archivos
+            // agregamos el encabezado
             writer.write("TipoDocumento;NúmeroDocumento;Nombres;Apellidos\n");
 
-            // tipos de documento disponibles para los vendors
             String[] tipos = {"CC", "TI", "CE"};
-            // nombres de los vendeores
             String[] nombres = {"Juan", "María", "Carlos", "Ana", "Pedro", "Laura", "Luis", "Patricia"};
-            // apellidos
             String[] apellidos = {"Pérez", "García", "López", "Martínez", "Rodríguez", "Hernández", "González", "Flores"};
 
             Random random = new Random();
@@ -58,7 +55,11 @@ public class GenerateInfoFiles {
                 String nombre = nombres[random.nextInt(nombres.length)];
                 String apellido = apellidos[random.nextInt(apellidos.length)];
 
-                // aquí se escribe la línea en formato así == tipo;numero;nombre;apellido
+                // guardamos el ID y nombre para usarlo después
+                idsGenerados.add(numeroDocumento);
+                nombresGenerados.add(nombre);
+
+                // escribimos la línea
                 writer.write(tipo + ";" + numeroDocumento + ";" + nombre + ";" + apellido + "\n");
             }
 

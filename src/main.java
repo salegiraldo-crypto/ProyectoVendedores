@@ -62,7 +62,7 @@ public class main {
         try {
             // aquí son 4 pasos, creo que así entendemos mejor:
             // PASO 1: Leer archivo de vendedores
-            System.out.println("Paso 1: Leyendo vendedores.txt...");
+            System.out.println("Paso 1: Leyendo vendedores");
             leerVendedores("vendedores.txt", vendedores, vendedoresMap);
             System.out.println("Se cargaron " + vendedores.size() + " vendedores\n");
 

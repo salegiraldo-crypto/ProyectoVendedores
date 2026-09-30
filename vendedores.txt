@@ -1,6 +1,6 @@
 TipoDocumento;NúmeroDocumento;Nombres;Apellidos
-CC;247021654;Juan;González
-TI;928500371;María;García
-TI;903003742;Laura;García
-CC;337960222;Carlos;Flores
-TI;771097378;Juan;Martínez
+CC;625859736;María;Martínez
+CC;697613008;María;López
+TI;794443205;Ana;Martínez
+CC;211517043;María;Martínez
+CC;995534393;Pedro;Hernández
