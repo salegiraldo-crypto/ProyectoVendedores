@@ -1,0 +1,76 @@
+| Integrantes G-13 |
+
+- Sergio Giraldo Cortes
+- Leidy Vanessa Bernal Murcia
+- Kelly Mejia Narvaez 
+
+CONCLUSIÓN DEL PROYECTO - GESTIÓN DE VENDEDORES Y PRODUCTOS
+
+1. LO APRENDIDO DURANTE EL DESARROLLO
+
+Durante este proyecto aprendimos conceptos fundamentales de programación en Java:
+
+- Uso de clases e instanciación de objetos
+- Lectura y escritura de archivos con BufferedReader y FileWriter
+- Manejo de estructuras de datos como ArrayList, HashMap
+- Implementación de interfaces (Comparable) para ordenamiento
+- Generación de datos pseudoaleatorios con Random
+- Separación de responsabilidades con múltiples métodos
+- Uso de encapsulación para modelar datos reales
+- Procesamiento de archivos CSV
+
+También aprendimos sobre buenas prácticas:
+- Nombres significativos para variables y métodos
+- Documentación de código con comentarios
+- Estructura y organización de proyectos
+- Versionamiento con Git y GitHub
+
+
+2. APLICACIONES PROFESIONALES
+
+Los conceptos y destrezas desarrolladas en este proyecto son aplicables en:
+
+- Sistemas de gestión de ventas y CRM: El procesamiento de datos de vendedores 
+  y productos es muy común en aplicaciones empresariales reales.
+
+- ETL (Extract-Transform-Load): El código lee datos de múltiples fuentes, los 
+  procesa y genera reportes, que es exactamente lo que hacen los sistemas ETL 
+  en empresas como Amazon.
+
+- Análisis de datos: Generar reportes ordenados y filtrados es esencial en 
+  análisis de información de negocios.
+
+- Automatización de procesos: El programa automatiza tareas repetitivas sin 
+  intervención del usuario.
+
+- Desarrollo de aplicaciones backend: La lógica de procesamiento de datos es 
+  base para cualquier aplicación web o de escritorio.
+
+
+3. DIFICULTADES PRESENTADAS
+
+Durante el desarrollo encontramos varios desafíos:
+
+- Configuración de Java y IDE: El error de versión de Java en Eclipse fue 
+  complicado, pero se resolvió usando IntelliJ IDEA.
+
+- Sincronización de datos: Inicialmente los IDs de vendedores no coincidían con 
+  los nombres en los archivos de ventas, lo que causaba que el programa no 
+  encontrara los archivos. Se arregló pasando los datos generados entre métodos.
+
+- Manejo de archivos: Entender cómo leer archivos línea por línea y parsear los 
+  datos separados por punto y coma requirió práctica.
+
+- Ordenamiento con Comparable: Implementar el método compareTo fue inicialmente 
+  confuso, pero fue fundamental para ordenar los datos correctamente.
+
+- Autenticación en GitHub: El cambio de GitHub a tokens personales en lugar de 
+  contraseñas fue un cambio importante que hubo que aprender.
+
+A pesar de estos desafíos, todos fueron superados exitosamente y el proyecto 
+quedó completamente funcional.
+
+
+Fecha: Octubre 2026
+Institución: Politécnico Grancolombiano
+Módulo: Conceptos Fundamentales de Programación
